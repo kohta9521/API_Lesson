@@ -9,11 +9,12 @@ app.post("/booklog", (req, res) => {
     const booklog = req.body
 
     if (!(booklog.name && booklog.text )) {
-        res.json({
+        return res.json({
             "ok": false,
+            "error": "invalid parameter"
         })
     }
-    
+
     res.json({
         "OK": true,
         "booklog": booklog
