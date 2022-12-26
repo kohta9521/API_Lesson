@@ -1,6 +1,15 @@
+const { request } = require('express');
 const express = require('express');
 const app = express();
 const port = 3000;
+
+app.use(express.json());
+
+app.post("/booklog", (req, res) => {
+    rea.json({
+        "OK": true
+    })
+});
 
 
 app.listen(port, () => {
