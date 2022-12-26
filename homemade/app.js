@@ -6,7 +6,7 @@ const port = 3000;
 app.use(express.json());
 
 app.post("/booklog", (req, res) => {
-    rea.json({
+    res.json({
         "OK": true
     })
 });
