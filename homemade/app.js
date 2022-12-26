@@ -7,6 +7,13 @@ app.use(express.json());
 
 app.post("/booklog", (req, res) => {
     const booklog = req.body
+
+    if (!(booklog.name && booklog.text )) {
+        res.json({
+            "ok": false,
+        })
+    }
+    
     res.json({
         "OK": true,
         "booklog": booklog
