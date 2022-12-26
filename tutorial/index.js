@@ -47,3 +47,12 @@ app.put("/api/customers/:id", (req, res) => {
     res.send(customer);
 });
 
+// データを削除 (DELETEメソッド)
+app.delete("/api/customers/:id", (req, res) => {
+    const customer = customers.find((c) => c.id === parseInt(req.params.id));
+
+    const index = customers.indexOf(customer);
+    customers.splice(index, 1);
+
+    res.send(customer);
+});
