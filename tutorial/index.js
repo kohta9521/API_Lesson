@@ -21,3 +21,10 @@ const customers = [
 app.get("/api/customers", (req, res) => {
     res.send(customers);
 })
+
+
+// find関数　理解しておく
+app.get("/api/customers/:id", (req, res) => {
+    const customer = customers.find((c) => c.id === parseInt(req.params.id));
+    res.send(customer);
+});
