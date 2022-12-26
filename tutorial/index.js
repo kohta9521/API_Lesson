@@ -16,3 +16,8 @@ const customers = [
     { title: "安藤", id: 5 },
 ]
 
+
+// データの取得を可能にする(CRUD) (GETメソッド)
+app.get("/api/customers", (req, res) => {
+    res.send(customers);
+})
